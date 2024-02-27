@@ -51,6 +51,11 @@ body {
     }
   } */
 
+.contact {
+    text-indent: 15px;
+    color: transparent;
+}
+
 @media screen and (min-width: 996px) {
     .header{
         height: auto;
@@ -66,13 +71,18 @@ body {
     footer {
         background-color: rgba(54, 54, 54, 0.616);
         display: grid;
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(3, 250px);
         gap: 50px;
 
+    }
+    .contact {
+        text-indent: 15px;
+        color: black;
     }
 }
 
 footer {
+    width: 100%;
     background-color: rgba(54, 54, 54, 0.616);
     display: grid;
     gap: 50px;
@@ -135,6 +145,11 @@ button{
 
 .img2 {
     width: 500px;
+}
+
+.img-footer {
+    width: 40px;
+    margin: 0 10px;
 }
 
 .h1{
