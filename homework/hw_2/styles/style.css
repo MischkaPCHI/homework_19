@@ -51,11 +51,6 @@ body {
     }
   } */
 
-.contact {
-    text-indent: 15px;
-    color: transparent;
-}
-
 @media screen and (min-width: 996px) {
     .header{
         height: auto;
@@ -74,10 +69,6 @@ body {
         grid-template-columns: repeat(3, 250px);
         gap: 50px;
 
-    }
-    .contact {
-        text-indent: 15px;
-        color: black;
     }
 }
 
