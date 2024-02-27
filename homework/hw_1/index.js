@@ -15,8 +15,10 @@ const object2 = {
   };
 
 const newObject = (obj1, obj2) => {return{...obj1, ...obj2}};
+const newObject2 = (obj1, obj2) => Object.assign(obj1, obj2);
 
 console.log(newObject(object1,object2));
+console.log(newObject2(object1,object2));
 
 console.log('----------------------------------');
 
@@ -41,5 +43,8 @@ const objectComparison = (obj1, obj2) => {
 
 }
 
+const objectComparison2 = (obj1, obj2) => JSON.stringify(obj1) === JSON.stringify(obj2);
 
-console.log(objectComparison(object1, object2));;
+
+console.log(objectComparison(object1, object2));
+console.log(objectComparison2(object1, object2));
