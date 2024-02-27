@@ -7,11 +7,11 @@ const object1 = {
   };
 
 const object2 = {
-    key3: 'new_value3',
-    key4: 'new_value4',
-    key5: 'new_value5',
-    key6: 'value6',
-    key7: 'value7'
+    key1: 'new_value3',
+    key2: 'new_value4',
+    key3: 'new_value5',
+    key4: 'value6',
+    key5: 'value7'
   };
 
 const newObject = (obj1, obj2) => {return{...obj1, ...obj2}};
@@ -28,23 +28,40 @@ const objectComparison = (obj1, obj2) => {
     const key1 = Object.keys(obj1);
     const key2 = Object.keys(obj2);
 
-    if(key1.length !== key2.length){
-        return false;
-    }
+    const value1 = Object.values(obj1);
+    const value2 = Object.values(obj2);
 
-    for (let key of key1) {
-        if(!key2.includes(key) || !objectComparison(obj1[key], obj2[key])){
-            return false;
+    console.log(value1);
+
+    for (let i = 0; i < value2.length; i++) {
+        if(key1.length === key2.length && value1[i] === value2[i]) {
+            return true;
         }
     }
     
 
-    return true;
+    return false;
 
 }
+
+const ob1 = {
+    key1: 'value1',
+    key2: 'value2',
+    key3: 'value3',
+    key4: 'value4',
+    key5: 'value5'
+  };
+
+const ob2 = {
+    key3: 'new_value3',
+    key4: 'new_value4',
+    key5: 'new_value5',
+    key6: 'value6',
+    key7: 'value7'
+  };
 
 const objectComparison2 = (obj1, obj2) => JSON.stringify(obj1) === JSON.stringify(obj2);
 
 
-console.log(objectComparison(object1, object2));
-console.log(objectComparison2(object1, object2));
+console.log(objectComparison(ob1, ob2));
+console.log(objectComparison2(ob1, ob2));
