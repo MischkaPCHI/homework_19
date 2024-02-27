@@ -3,6 +3,20 @@
     padding: 0;
 }
 
+body {
+    height: 100vh;
+    margin: 0;
+    background-size: 200% 200%;
+    background-image: linear-gradient(20deg,#00cc99, #eef0f5, #6600ff);
+    animation: gradient 20s ease-in infinite;
+}
+
+@keyframes gradient {
+    0% {background-position: 0% 50%;}
+    50% {background-position: 100% 50%;}
+    100% {background-position: 0% 50%;}
+}
+
 .header{
     background-color: rgba(54, 54, 54, 0.616);
     display: grid;
@@ -12,7 +26,30 @@
     border-bottom-left-radius: 10px;
     align-items: center;
     justify-items: center;
+    position: sticky;
+    top: 0;
 }
+
+/* .header {
+    width: auto;
+    height: auto;
+    background: crimson;
+    box-shadow: 0 -150px 70px -120px #00cc99 inset,
+                0 -220px 70px -120px #eef0f5 inset,
+                0 -280px 70px -120px #6600ff inset;
+    border-bottom-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+    animation: background 8s infinite alternate;
+  }
+  
+  @keyframes background {
+    50% {
+      background: darkviolet;
+      box-shadow: 0 -140px 70px -120px #6600ff inset,
+                  0 -210px 70px -120px #eef0f5 inset,
+                  0 -280px 70px -120px #00cc99 inset;
+    }
+  } */
 
 @media screen and (min-width: 996px) {
     .header{
@@ -41,6 +78,30 @@ footer {
     gap: 50px;
     grid-template-rows: repeat(3, auto);
 }
+
+/* footer {
+    --angle: 0deg;
+    width: auto;
+    height: auto;
+    border: 10px solid;
+    border-image: linear-gradient(var(--angle),
+                #00cc99, 
+                #eef0f5, 
+                #6600ff) 1;
+    animation: 5s rotate linear infinite;
+}
+    
+@keyframes rotate {
+    to {
+    --angle: 360deg
+    }
+}
+    
+@property --angle {
+    syntax: '<angle>'; 
+    initial-value: 0deg; 
+    inherits: false;
+} */
 
 .logo{
     height: 50px;
