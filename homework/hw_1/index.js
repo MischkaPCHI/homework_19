@@ -31,7 +31,7 @@ const objectComparison = (obj1, obj2) => {
     }
 
     for (let key of key1) {
-        if(!key2.includes(key)){
+        if(!key2.includes(key) || !objectComparison(obj1[key], obj2[key])){
             return false;
         }
     }
@@ -42,4 +42,4 @@ const objectComparison = (obj1, obj2) => {
 }
 
 
-console.log(objectComparison(object1, object2));
+console.log(objectComparison(object1, object2));;
