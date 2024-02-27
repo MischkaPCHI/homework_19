@@ -1,7 +1,3 @@
-// Для домашки в навигационным меню, сделать чтобы пункты меню добавлялись из JS из массива (и сами пункты названия, и ссылки куда они должны вести), а не прописывались в HTML.
-
-// Пример массива:
-
 const array = [
   {
     title: 'Javarush',
@@ -29,7 +25,7 @@ const array = [
   }
 ];
 
-const carPartsElements = document.querySelector('.header');
+const arrayElements = document.querySelector('.header');
 
 
 const arrToList = (array) => {
@@ -41,7 +37,7 @@ const arrToList = (array) => {
         newListItem.href = element.link;
         return newListItem;
     })
-    carPartsElements.append(...temp);
+    arrayElements.append(...temp);
 };
 
 arrToList(array);
