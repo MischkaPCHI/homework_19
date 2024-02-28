@@ -31,16 +31,14 @@ const objectComparison = (obj1, obj2) => {
     const value1 = Object.values(obj1);
     const value2 = Object.values(obj2);
 
-    console.log(value1);
-
-    for (let i = 0; i < value2.length; i++) {
-        if(key1.length === key2.length && value1[i] === value2[i]) {
-            return true;
+    for (let i = 0; i < value1.length; i++) {
+        if(key1.length !== key2.length || key1[i] !== key2[i] || value1[i] !== value2[i]) {
+            return false;
         }
     }
     
 
-    return false;
+    return true;
 
 }
 
